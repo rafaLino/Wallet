@@ -1,13 +1,28 @@
 {
-  "@@last_modified": "2019-10-22T01:21:24.045052",
+  "@@last_modified": "2019-10-27T18:09:04.042058",
   "title": "title",
   "@title": {
     "description": "Title for the Demo application",
     "type": "text",
     "placeholders": {}
   },
-  "hello": "hello",
-  "@hello": {
+  "home_BottomNavigationBarItem_Text_Search": "home_BottomNavigationBarItem_Text_Search",
+  "@home_BottomNavigationBarItem_Text_Search": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "home_BottomNavigationBarItem_Text_Home": "home_BottomNavigationBarItem_Text_Home",
+  "@home_BottomNavigationBarItem_Text_Home": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "home_BottomNavigationBarItem_Text_Settings": "home_BottomNavigationBarItem_Text_Settings",
+  "@home_BottomNavigationBarItem_Text_Settings": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "home_BottomNavigationBarItem_Text_Graphics": "home_BottomNavigationBarItem_Text_Graphics",
+  "@home_BottomNavigationBarItem_Text_Graphics": {
     "type": "text",
     "placeholders": {}
   }

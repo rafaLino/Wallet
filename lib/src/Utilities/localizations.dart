@@ -35,13 +35,14 @@ import 'package:intl/intl.dart';
 //
 // flutter pub get
 // flutter pub pub run intl_translation:extract_to_arb --output-dir=lib/assets/l10n lib/src/Utilities/localizations.dart
-// flutter pub pub run intl_translation:generate_from_arb --output-dir=lib/assets/l10n --no-use-deferred-loading lib/src/Utilities/localizations.dart lib/assets/l10n ./intl_all.arb ./intl_en.arb ./intl_es.arb ./intl_pt.arb
-//
+// flutter pub pub run intl_translation:generate_from_arb --output-dir=lib/assets/l10n --no-use-deferred-loading lib/src/Utilities/localizations.dart lib/assets/l10n/intl_en.arb lib/assets/l10n/intl_pt.arb lib/assets/l10n/intl_es.arb
+
 // The second command generates intl_messages.arb and the third generates
 // messages_all.dart. There's more about this process in
 // https://pub.dev/packages/intl.
 import '../../assets/l10n/messages_all.dart';
 
+// ignore_for_file: non_constant_identifier_names
 class DemoLocalizations {
   static Future<DemoLocalizations> load(Locale locale) {
     final String name =
@@ -63,9 +64,17 @@ class DemoLocalizations {
         name: 'title', desc: 'Title for the Demo application');
   }
 
-  String get hello {
-    return Intl.message('hello', name: 'hello');
-  }
+  String get home_BottomNavigationBarItem_Text_Search =>
+      Intl.message("home_BottomNavigationBarItem_Text_Search");
+
+  String get home_BottomNavigationBarItem_Text_Home =>
+      Intl.message("home_BottomNavigationBarItem_Text_Home");
+
+  String get home_BottomNavigationBarItem_Text_Settings =>
+      Intl.message("home_BottomNavigationBarItem_Text_Settings");
+
+  String get home_BottomNavigationBarItem_Text_Graphics =>
+      Intl.message('home_BottomNavigationBarItem_Text_Graphics');
 }
 
 class DemoLocalizationsDelegate

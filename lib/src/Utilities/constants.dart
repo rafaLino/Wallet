@@ -5,3 +5,5 @@ class Language {
   static Locale english = Locale('en', 'US');
   static Locale spanish = Locale('es', 'US');
 }
+
+enum HomePages { Search, Wallet, Settings, Graphics }
