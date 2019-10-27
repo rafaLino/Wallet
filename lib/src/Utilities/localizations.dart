@@ -72,6 +72,9 @@ class DemoLocalizations {
 
   String get home_BottomNavigationBarItem_Text_Settings =>
       Intl.message("home_BottomNavigationBarItem_Text_Settings");
+
+  String get home_BottomNavigationBarItem_Text_Graphics =>
+      Intl.message('home_BottomNavigationBarItem_Text_Graphics');
 }
 
 class DemoLocalizationsDelegate

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:wallet_rebalance/src/Screens/Graphic/graphics.dart';
 import 'package:wallet_rebalance/src/Screens/Search/search.dart';
 import 'package:wallet_rebalance/src/Screens/Settings/settings.dart';
 import 'package:wallet_rebalance/src/Screens/Wallet/wallet.dart';
+import 'package:wallet_rebalance/src/Utilities/constants.dart';
 import 'package:wallet_rebalance/src/Utilities/localizations.dart';
 
 class Home extends StatefulWidget {
@@ -11,9 +13,9 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   PageController _pageController;
-  var _page = 1; //wallet;
+  var _page = HomePages.Wallet.index;
 
-  final _screens = <Widget>[Search(), Wallet(), Settings()];
+  final _screens = <Widget>[Search(), Wallet(), Graphics(), Settings()];
 
   @override
   void initState() {
@@ -24,6 +26,11 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white12,
+        brightness: Brightness.dark,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -35,9 +42,13 @@ class _HomeState extends State<Home> {
               title: Text(DemoLocalizations.of(context)
                   .home_BottomNavigationBarItem_Text_Home)),
           BottomNavigationBarItem(
+              icon: Icon(Icons.insert_chart),
+              title: Text(DemoLocalizations.of(context)
+                  .home_BottomNavigationBarItem_Text_Graphics)),
+          BottomNavigationBarItem(
               icon: Icon(Icons.settings),
               title: Text(DemoLocalizations.of(context)
-                  .home_BottomNavigationBarItem_Text_Settings))
+                  .home_BottomNavigationBarItem_Text_Settings)),
         ],
         onTap: navigationTapped,
         currentIndex: this._page,
@@ -50,6 +61,10 @@ class _HomeState extends State<Home> {
         onPageChanged: onPageChanged,
         pageSnapping: true,
       ),
+      drawer: Drawer(
+          child: Center(
+        child: Text('SLIDEBAR'),
+      )),
     );
   }
 

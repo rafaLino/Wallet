@@ -8,5 +8,6 @@
    },
   "home_BottomNavigationBarItem_Text_Search": "Buscar",
   "home_BottomNavigationBarItem_Text_Home": "Inicio",
-  "home_BottomNavigationBarItem_Text_Settings": "Configuraciones"
+  "home_BottomNavigationBarItem_Text_Settings": "Configuraciones",
+  "home_BottomNavigationBarItem_Text_Graphics": "Gráficos"
 }
