@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:wallet_rebalance/src/Screens/Graphic/graphics.dart';
 import 'package:wallet_rebalance/src/Screens/Search/search.dart';
 import 'package:wallet_rebalance/src/Screens/Settings/settings.dart';
@@ -42,7 +43,7 @@ class _HomeState extends State<Home> {
               title: Text(DemoLocalizations.of(context)
                   .home_BottomNavigationBarItem_Text_Home)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.insert_chart),
+              icon: Icon(FontAwesomeIcons.chartBar),
               title: Text(DemoLocalizations.of(context)
                   .home_BottomNavigationBarItem_Text_Graphics)),
           BottomNavigationBarItem(
