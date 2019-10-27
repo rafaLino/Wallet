@@ -6,9 +6,7 @@
      "type": "text",
      "placeholders": {}
    },
-   "hello": "Olá",
-   "@hello": {
-     "type": "text",
-     "placeholders": {}
-   }
+   "home_BottomNavigationBarItem_Text_Search": "Buscar",
+   "home_BottomNavigationBarItem_Text_Home": "Início",
+   "home_BottomNavigationBarItem_Text_Settings": "Configurações"
 }

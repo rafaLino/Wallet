@@ -25,7 +25,13 @@ class App extends StatelessWidget {
             (Locale locale, Iterable<Locale> supportedLocales) {
           return Language.brazil;
         },
-        theme: ThemeData(primarySwatch: Colors.cyan),
+        theme: ThemeData(
+            primarySwatch: Colors.blue,
+            primaryColor: Colors.black,
+            primaryIconTheme: IconThemeData(color: Colors.black),
+            primaryTextTheme: TextTheme(
+                title: TextStyle(color: Colors.black, fontFamily: "Aveny")),
+            textTheme: TextTheme(title: TextStyle(color: Colors.black))),
         initialRoute: Routes.home,
         routes: Routes().initialize());
   }

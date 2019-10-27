@@ -1,6 +1,6 @@
 # wallet_rebalance
 
-A new Flutter project.
+Flutter project.
 
 ## Getting Started
 
