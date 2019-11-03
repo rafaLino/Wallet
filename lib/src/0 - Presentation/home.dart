@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:wallet_rebalance/src/Screens/Graphic/graphics.dart';
-import 'package:wallet_rebalance/src/Screens/Search/search.dart';
-import 'package:wallet_rebalance/src/Screens/Settings/settings.dart';
-import 'package:wallet_rebalance/src/Screens/Wallet/wallet.dart';
-import 'package:wallet_rebalance/src/Utilities/constants.dart';
-import 'package:wallet_rebalance/src/Utilities/localizations.dart';
+import 'package:wallet_rebalance/src/2%20-%20Domain/Models/Enums/homePages.dart';
+import 'package:wallet_rebalance/src/2%20-%20Domain/Services/localizations.dart';
+import 'graphics.dart';
+import 'search.dart';
+import 'wallet.dart';
+import 'settings.dart';
 
 class Home extends StatefulWidget {
   @override

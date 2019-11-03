@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wallet_rebalance/src/Utilities/localizations.dart';
 
 class Wallet extends StatefulWidget {
   @override
