@@ -34,13 +34,13 @@ import 'package:intl/intl.dart';
 // directory:
 //
 // flutter pub get
-// flutter pub pub run intl_translation:extract_to_arb --output-dir=lib/assets/l10n lib/src/Utilities/localizations.dart
-// flutter pub pub run intl_translation:generate_from_arb --output-dir=lib/assets/l10n --no-use-deferred-loading lib/src/Utilities/localizations.dart lib/assets/l10n/intl_en.arb lib/assets/l10n/intl_pt.arb lib/assets/l10n/intl_es.arb
+// flutter pub pub run intl_translation:extract_to_arb --output-dir=lib/assets/l10n "lib/src/2 - Domain/Services/localizations.dart"
+// flutter pub pub run intl_translation:generate_from_arb --output-dir=lib/assets/l10n --no-use-deferred-loading "lib/src/2 - Domain/Services/localizations.dart" lib/assets/l10n/intl_en.arb lib/assets/l10n/intl_pt.arb lib/assets/l10n/intl_es.arb
 
 // The second command generates intl_messages.arb and the third generates
 // messages_all.dart. There's more about this process in
 // https://pub.dev/packages/intl.
-import '../../assets/l10n/messages_all.dart';
+import '../../../assets/l10n/messages_all.dart';
 
 // ignore_for_file: non_constant_identifier_names
 class DemoLocalizations {
