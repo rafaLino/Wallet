@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2019-10-22T01:21:24.045052",
+  "@@last_modified": "2020-01-27T01:00:28.208597",
   "title": "title",
   "@title": {
     "description": "Title for the Demo application",
@@ -8,6 +8,21 @@
   },
   "hello": "hello",
   "@hello": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "navigationBarSubtitle_home": "navigationBarSubtitle_home",
+  "@navigationBarSubtitle_home": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "navigationBarSubtitle_graphics": "navigationBarSubtitle_graphics",
+  "@navigationBarSubtitle_graphics": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "navigationBarSubtitle_settings": "navigationBarSubtitle_settings",
+  "@navigationBarSubtitle_settings": {
     "type": "text",
     "placeholders": {}
   }

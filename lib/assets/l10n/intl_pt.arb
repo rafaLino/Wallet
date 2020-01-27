@@ -10,5 +10,21 @@
    "@hello": {
      "type": "text",
      "placeholders": {}
-   }
+   },
+
+   "navigationBarSubtitle_home": "Início",
+         "@navigationBarSubtitle_home": {
+           "type": "text",
+           "placeholders": {}
+         },
+      "navigationBarSubtitle_settings": "Configurações",
+         "@navigationBarSubtitle_settings": {
+           "type": "text",
+           "placeholders": {}
+         },
+      "navigationBarSubtitle_graphics": "Gráficos",
+         "@navigationBarSubtitle_graphics": {
+           "type": "text",
+           "placeholders": {}
+         }
 }

@@ -34,8 +34,8 @@ import 'package:intl/intl.dart';
 // directory:
 //
 // flutter pub get
-// flutter pub pub run intl_translation:extract_to_arb --output-dir=lib/assets/l10n lib/src/Utilities/localizations.dart
-// flutter pub pub run intl_translation:generate_from_arb --output-dir=lib/assets/l10n --no-use-deferred-loading lib/src/Utilities/localizations.dart lib/assets/l10n ./intl_all.arb ./intl_en.arb ./intl_es.arb ./intl_pt.arb
+// flutter pub run intl_translation:extract_to_arb --output-dir=lib/assets/l10n lib/src/Utilities/localizations.dart
+// flutter pub run intl_translation:generate_from_arb --output-dir=lib/assets/l10n --no-use-deferred-loading lib/src/Utilities/localizations.dart lib/assets/l10n ./intl_all.arb ./intl_en.arb ./intl_es.arb ./intl_pt.arb
 //
 // The second command generates intl_messages.arb and the third generates
 // messages_all.dart. There's more about this process in
@@ -65,6 +65,18 @@ class DemoLocalizations {
 
   String get hello {
     return Intl.message('hello', name: 'hello');
+  }
+
+  String get navigationBarSubtitle_home{
+    return Intl.message('navigationBarSubtitle_home', name: 'navigationBarSubtitle_home');
+  }
+
+  String get navigationBarSubtitle_graphics{
+    return Intl.message('navigationBarSubtitle_graphics', name: 'navigationBarSubtitle_graphics');
+  }
+
+  String get navigationBarSubtitle_settings{
+    return Intl.message('navigationBarSubtitle_settings', name: 'navigationBarSubtitle_settings');
   }
 }
 
