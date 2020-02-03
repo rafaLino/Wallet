@@ -11,7 +11,7 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
  Routes _routes = Routes();
- int _selected = 0;
+ int _selected = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

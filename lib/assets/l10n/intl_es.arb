@@ -1,4 +1,5 @@
 {
+  "@@locale": "es",
    "@@last_modified": "2018-05-25T11:50:40.743319",
    "title": "App Hola Mundo",
    "@title": {
@@ -12,17 +13,17 @@
      "placeholders": {}
    },
 
-   "navigationBarSubtitle_home": "Home",
+   "navigationBarSubtitle_home": "Início",
          "@navigationBarSubtitle_home": {
            "type": "text",
            "placeholders": {}
          },
-      "navigationBarSubtitle_settings": "Settings",
+      "navigationBarSubtitle_settings": "Configuración",
          "@navigationBarSubtitle_settings": {
            "type": "text",
            "placeholders": {}
          },
-      "navigationBarSubtitle_graphics": "Graphics",
+      "navigationBarSubtitle_graphics": "Gráficos",
          "@navigationBarSubtitle_graphics": {
            "type": "text",
            "placeholders": {}

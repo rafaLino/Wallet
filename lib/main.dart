@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:wallet_rebalance/src/Utilities/PalleteColors.dart';
 import 'package:wallet_rebalance/src/Utilities/constants.dart';
@@ -9,10 +10,13 @@ import 'package:wallet_rebalance/src/bottomNavigation.dart';
 void main() => runApp(App());
 
 class App extends StatelessWidget {
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIOverlays([]);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: [
         DemoLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
@@ -32,3 +36,5 @@ class App extends StatelessWidget {
     );
   }
 }
+
+

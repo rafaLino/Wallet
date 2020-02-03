@@ -35,7 +35,7 @@ import 'package:intl/intl.dart';
 //
 // flutter pub get
 // flutter pub run intl_translation:extract_to_arb --output-dir=lib/assets/l10n lib/src/Utilities/localizations.dart
-// flutter pub run intl_translation:generate_from_arb --output-dir=lib/assets/l10n --no-use-deferred-loading lib/src/Utilities/localizations.dart lib/assets/l10n ./intl_all.arb ./intl_en.arb ./intl_es.arb ./intl_pt.arb
+// flutter pub run intl_translation:generate_from_arb --output-dir=lib/assets/l10n --no-use-deferred-loading lib/src/Utilities/localizations.dart ./lib/assets/l10n/intl_en.arb ./lib/assets/l10n/intl_es.arb ./lib/assets/l10n/intl_pt.arb
 //
 // The second command generates intl_messages.arb and the third generates
 // messages_all.dart. There's more about this process in
@@ -78,6 +78,7 @@ class DemoLocalizations {
   String get navigationBarSubtitle_settings{
     return Intl.message('navigationBarSubtitle_settings', name: 'navigationBarSubtitle_settings');
   }
+
 }
 
 class DemoLocalizationsDelegate

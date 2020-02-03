@@ -1,0 +1,6 @@
+ECHO rebuilding all messages...
+CALL flutter pub run intl_translation:extract_to_arb --output-dir=lib/assets/l10n lib/src/Utilities/localizations.dart
+ECHO updating messages...
+CALL flutter pub run intl_translation:generate_from_arb --output-dir=lib/assets/l10n --no-use-deferred-loading lib/src/Utilities/localizations.dart ./lib/assets/l10n/intl_en.arb ./lib/assets/l10n/intl_es.arb ./lib/assets/l10n/intl_pt.arb
+ECHO finished
+PAUSE
