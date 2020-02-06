@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:wallet_rebalance/src/Components/stockCard.dart';
-import 'package:wallet_rebalance/src/Utilities/localizations.dart';
+import 'package:wallet_rebalance/src/Utilities/Language.dart';
+
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -9,6 +9,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeState extends State<HomeScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -37,7 +38,7 @@ class _HomeState extends State<HomeScreen> {
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.all(24),
-                  child: Text(NumberFormat.)
+                  child: Text(Language(Localizations.localeOf(context)).moneyFormatter.format(12000))
                 ),
                 Center(child: StockCard()),
               ],

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:wallet_rebalance/src/Utilities/PalleteColors.dart';
-import 'package:wallet_rebalance/src/Utilities/constants.dart';
+import 'package:wallet_rebalance/src/Utilities/Language.dart';
 import 'package:wallet_rebalance/src/Utilities/localizations.dart';
 import 'package:wallet_rebalance/src/bottomNavigation.dart';
 
@@ -25,7 +25,7 @@ class App extends StatelessWidget {
       supportedLocales: [Locale('en'), Locale('es'), Locale('pt')],
       localeResolutionCallback:
           (Locale locale, Iterable<Locale> supportedLocales) {
-        return Language.english;
+        return Language.brazil;
       },
       theme: ThemeData(
         scaffoldBackgroundColor: Pallete.kBlack,
