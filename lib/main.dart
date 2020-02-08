@@ -28,9 +28,9 @@ class App extends StatelessWidget {
         return Language.brazil;
       },
       theme: ThemeData(
-        scaffoldBackgroundColor: Pallete.kBlack,
+        scaffoldBackgroundColor: Pallete.kWhite,
         primaryColor: Pallete.kGreen,
-        textTheme: TextTheme(bodyText2: TextStyle(color: Pallete.kWhite))
+        textTheme: TextTheme(bodyText2: TextStyle(color: Pallete.kBlack))
       ),
       home: BottomNavigation(),
     );

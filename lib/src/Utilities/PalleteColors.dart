@@ -9,4 +9,8 @@ class Pallete {
   static Color kBlack = Color(0xff12131f);
   static Color kGreen = Color(0xff5b9276);
   static Color kLightPurple = Color(0xffb95af2);
+
+  static Color hexToColor(String code){
+    return new Color(int.parse(code.substring(1,7), radix: 16) + 0xFF000000);
+  }
 }
