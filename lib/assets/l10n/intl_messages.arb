@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2020-02-02T18:35:09.040109",
+  "@@last_modified": "2020-02-25T11:24:09.519447",
   "title": "title",
   "@title": {
     "description": "Title for the Demo application",
@@ -23,6 +23,11 @@
   },
   "navigationBarSubtitle_settings": "navigationBarSubtitle_settings",
   "@navigationBarSubtitle_settings": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "amount_invested": "amount_invested",
+  "@amount_invested": {
     "type": "text",
     "placeholders": {}
   }

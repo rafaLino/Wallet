@@ -27,5 +27,10 @@
       "@navigationBarSubtitle_graphics": {
         "type": "text",
         "placeholders": {}
-      }
+      },
+  "amount_invested": "Amount invested",
+  "@amount_invested": {
+    "type": "text",
+    "placeholders": {}
+  }
  }

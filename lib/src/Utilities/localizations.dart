@@ -79,6 +79,10 @@ class DemoLocalizations {
     return Intl.message('navigationBarSubtitle_settings', name: 'navigationBarSubtitle_settings');
   }
 
+  String get amount_invested {
+    return Intl.message('amount_invested', name: 'amount_invested');
+  }
+
 }
 
 class DemoLocalizationsDelegate

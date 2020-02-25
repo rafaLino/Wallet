@@ -5,6 +5,8 @@ import 'package:wallet_rebalance/src/Components/stockCard.dart';
 import 'package:wallet_rebalance/src/Screens/Home/style.dart';
 import 'package:wallet_rebalance/src/Utilities/Language.dart';
 import 'package:wallet_rebalance/src/Utilities/PalleteColors.dart';
+import 'package:wallet_rebalance/src/Utilities/currencyInputFormatter.dart';
+import 'package:wallet_rebalance/src/Utilities/localizations.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -12,6 +14,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeState extends State<HomeScreen> {
+  List<Widget> _itens = [StockCard(), StockCard(), StockCard()];
+  int _selectedStockIndex = 0;
   @override
   Widget build(BuildContext context) {
     final NumberFormat _formatter =
@@ -39,65 +43,58 @@ class _HomeState extends State<HomeScreen> {
             child: Padding(
               padding: const EdgeInsets.all(12),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
-                  SafeArea(
-                    child: Container(
-                      width: 200,
-                      padding: EdgeInsets.only(bottom: 24),
-                      child: TextFormField(
-                          inputFormatters: [
-                            LengthLimitingTextInputFormatter(16),
-                            TextInputFormatter.withFunction(
-                                (oldValue, newValue) {
-                              if (newValue.text.length == 0) {
-                                return newValue.copyWith(text: '');
-                              } else if (newValue.text
-                                      .compareTo(oldValue.text) !=
-                                  0) {
-                                int selectionIndexFromTheRight =
-                                    newValue.text.length -
-                                        newValue.selection.end;
-
-                                int num = int.parse(newValue.text.replaceAll(
-                                    Language.defaultNumberFormatter.symbols
-                                        .GROUP_SEP,
-                                    ''));
-                                final newString =
-                                    Language.defaultNumberFormatter.format(num);
-
-                                return new TextEditingValue(
-                                  text: newString,
-                                  selection: TextSelection.collapsed(
-                                      offset: newString.length -
-                                          selectionIndexFromTheRight),
-                                );
-                              } else {
-                                return newValue;
-                              }
-                            })
-                          ],
-                          initialValue:
-                              Language.defaultNumberFormatter.format(15000),
-                          textAlign: TextAlign.right,
-                          decoration: InputDecoration(
-                            suffixIcon: Icon(Icons.monetization_on),
-                            prefix: Text(_formatter.currencySymbol),
-                            labelText: 'Valor investido',
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            fillColor: Pallete.kWhite,
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(25),
-                            ),
-                          ),
-                          keyboardType: TextInputType.number,
-                          style: TextStyle(
-                            fontFamily: 'Poppins',
-                          )),
+                  Container(
+                    width: 200,
+                    padding: EdgeInsets.only(bottom: 24),
+                    child: TextFormField(
+                      inputFormatters: [
+                        LengthLimitingTextInputFormatter(16),
+                        CurrencyInputFormatter()
+                      ],
+                      initialValue:
+                          Language.defaultNumberFormatter.format(16000),
+                      textAlign: TextAlign.right,
+                      enabled: true,
+                      decoration: InputDecoration(
+                        suffixIcon: Icon(Icons.monetization_on),
+                        prefix: Text(_formatter.currencySymbol),
+                        labelText:
+                            DemoLocalizations.of(context).amount_invested,
+                        floatingLabelBehavior: FloatingLabelBehavior.always,
+                        fillColor: Pallete.kWhite,
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                      ),
+                      keyboardType: TextInputType.number,
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                      ),
                     ),
                   ),
-                  SafeArea(child: Center(child: StockCard())),
+                  Container(
+                    child: Expanded(
+                      child: GestureDetector(
+                        onHorizontalDragStart: (behave) {
+                          print('drag start $_selectedStockIndex');
+                        },
+                        onDoubleTap: (){
+                          print('double tap! $_selectedStockIndex');
+                        },
+                        child: ListWheelScrollView(
+                          itemExtent: 330,
+                          diameterRatio: 1.5,
+                          onSelectedItemChanged: (index){
+                            _selectedStockIndex = index;
+                          },
+                          children: _itens,
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),

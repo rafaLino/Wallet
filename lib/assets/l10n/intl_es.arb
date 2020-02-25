@@ -27,5 +27,10 @@
          "@navigationBarSubtitle_graphics": {
            "type": "text",
            "placeholders": {}
-         }
+         },
+      "amount_invested": "Cantidad invertida",
+      "@amount_invested": {
+        "type": "text",
+        "placeholders": {}
+      }
 }
